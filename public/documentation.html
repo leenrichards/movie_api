@@ -3,14 +3,134 @@
 
 <head>
     <title>MyFLIX</title>
+
 </head>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
 
 <body>
     <h1>MyFLIX API</h1>
-    <p>This web application will provide users with access to information about different
-        movies, directors, and genres. </p>
-    <p>Users will be able to sign up, update their
-        personal information, and create a list of their favorite movies. </p>
+    <div class="appDetails">This web application will provide users with access to information about different
+        movies, directors, and genres. Users will be able to sign up, update their
+        personal information, and create a list of their favorite movies.
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Method</th>
+                <th>Query Parameters</th>
+                <th>Endpoint URL</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Return a list of all movies in the database</td>
+                <td>GET</td>
+                <td>None passed (retrieve all)</td>
+                <td>'/movies'</td>
+                <td>Returns a JSON array of all movie objects in the database:<div class="parameterDesc">
+                        <p> MovieID: Integer,</p>
+                        <p> Title: String,</p>
+                        <p> Genre: String,</p>
+                        <p> Description: String</p>
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Return data about a single movie BY TITLE</td>
+                <td>GET</td>
+                <td>Title</td>
+                <td>'/movies/:title'</td>
+                <td>Returns a JSON object with data on a single movie based on the title passed in the url:<div
+                        class="parameterDesc">
+                        <p> MovieID: Integer,</p>
+                        <p> Title: String,</p>
+                        <p> Genre: String,</p>
+                        <p> Description: String</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Return data about a genre (description) by GENRE (e.g., “Thriller”)</td>
+                <td>GET</td>
+                <td>Genre</td>
+                <td>'/movies/:genre'</td>
+                <td>Returns a JSON array of all movies in the database based on the genre passed in the url:<div
+                        class="parameterDesc">
+                        <p> MovieID: Integer,</p>
+                        <p> Title: String,</p>
+                        <p> Genre: String,</p>
+                        <p> Description: String</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Return data about a director (bio, birth year, death year) BY DIRECTOR NAME</td>
+                <td>GET</td>
+                <td>Director</td>
+                <td>'/movies/:directorName'</td>
+                <td>Returns a JSON object containing data of the director based on the name that was passed in the url:
+                    <div class="parameterDesc">
+                        <p> DirectorID: Integer,</p>
+                        <p> Name: String,</p>
+                        <p> DOB: String,</p>
+                        <p> DOD: String</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Allow new users to register</td>
+                <td>POST</td>
+                <td>JSON object with user data:<div class="parameterDesc">
+                        <p> UserID: Integer,</p>
+                        <p>Username: String,</p>
+                        <p>Password: String,</p>
+                        <p>Email: String</p>
+                    </div>
+                </td>
+                <td>'/users'</td>
+                <td>Returns success message with username added.</td>
+            </tr>
+            <tr>
+                <td>Allow users to update their user info (username)</td>
+                <td>PUT</td>
+                <td>Username</td>
+                <td>'/users/:username'</td>
+                <td>Returns success message with the username that was updated by the user.</td>
+            </tr>
+            <tr>
+                <td>Allow users to add a movie to their list of favorite movies</td>
+                <td>POST</td>
+                <td>JSON object with movie data:<div class="parameterDesc">
+                        <p> MovieID: Integer,</p>
+                        <p> Title: String,</p>
+                        <p> Genre: String,</p>
+                        <p> Director: String</p>
+                    </div>
+                </td>
+                <td>'/users/add/:movieName'</td>
+                <td>Returns a text confirming which movie was added successfully.</td>
+            </tr>
+            <tr>
+                <td>Allow users to remove a movie to their list of favorite movies</td>
+                <td>DELETE</td>
+                <td>Title</td>
+                <td>'/users/remove/:movieName'</td>
+                <td>Returns a text confirming which movie was removed successfully.</td>
+            </tr>
+            <tr>
+                <td>Allow existing users to deregister</td>
+                <td>DELETE</td>
+                <td>Username</td>
+                <td>'/users/deleteAccount'</td>
+                <td>Returns a text confirming that the user's email was deleted successfully.</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>

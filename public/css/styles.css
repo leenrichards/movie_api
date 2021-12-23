@@ -1,0 +1,51 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+:root {
+    --body-font-size: 12pt;
+    --body-font-family: 'Mukta', sans-serif;
+}
+
+body {
+    font-family: var(--body-font-family);
+    letter-spacing: -.0027777778rem;
+    font-size: 11pt;
+}
+
+table {
+    border: 1px solid #4472C4;
+    border-collapse: collapse;
+    width: 90%;
+
+}
+
+th {
+
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #4472C4;
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+td {
+    border: 1px solid #4472C4;
+    font-size: 11pt;
+    padding: 0.2rem;
+
+}
+
+tr:nth-child(even) {
+    background-color: #D9E1F2;
+}
+
+.appDetails {
+     width: 80%;
+     padding-bottom: 2rem;
+}
+.parameterDesc {
+line-height: 0.2rem;
+
+}
+    
