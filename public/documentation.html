@@ -31,66 +31,77 @@
                 <td>GET</td>
                 <td>None passed (retrieve all)</td>
                 <td>'/movies'</td>
-                <td>Returns a JSON array of all movie objects in the database:<div class="parameterDesc">
+                <td>Returns a JSON array of all movies in the database:<div class="parameterDesc">
                         <p> MovieID: Integer,</p>
                         <p> Title: String,</p>
                         <p> Genre: String,</p>
                         <p> Description: String</p>
                         <p> Actors: String Array </p>
                     </div>
-
                 </td>
+
             </tr>
             <tr>
-                <td>Return data about a single movie BY TITLE</td>
+                <td>Return data about a single movie <b>BY TITLE</b></td>
                 <td>GET</td>
                 <td>Title</td>
-                <td>'/movies/:title'</td>
-                <td>Returns a JSON object with data on a single movie based on the title passed in the url:<div
-                        class="parameterDesc">
-                        <p> MovieID: Integer,</p>
-                        <p> Title: String,</p>
-                        <p> Genre: String,</p>
-                        <p> Description: String</p>
-                        <p> Actors: String Array </p>
+                <td>'/movies/title'</td>
+                <td>Returns a JSON object with data on a single movie based on the <b>title</b> passed in the url.
+                    Example:<div class="parameterDesc">
+                        <p> MovieID: "61d339a7ce15f2ca5a44c03b",</p>
+                        <p> <b>Title: "The Shawshank Redemption",</b></p>
+
+                        <p> Description: "The film portrays..."</p>
+
+
+                        <p> "Genre": {</p>
+                        <p> " - Name": "Drama",</p>
+                        <p> " - Description": "Drama is a category of film..." },</p>
+
+                        <p>"Director": {</p>
+                        <p>" - Name": "Frank Darabont",</p>
+                        <p>" - Bio": "Frank Árpád Darabont is ...",</p>
+                        <p>" - Birth": "1959-01-28" },</p>
+                        <p> Actors: ["61d32db13beaf479d1a06aa2","61d3320b3beaf479d1a06aa3"], </p>
+                        <p>"Featured": true</p>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td>Return a list of movies by GENRE (e.g., “Thriller”)</td>
+                <td>Return a list of movies <b>BY GENRE</b> (e.g., "Drama")</td>
                 <td>GET</td>
                 <td>Genre</td>
-                <td>'/movies/:genre'</td>
-                <td>Returns a JSON array of all movies in the database based on the genre passed in the url:<div
-                        class="parameterDesc">
-                        <p> MovieID: Integer,</p>
-                        <p> Title: String,</p>
-                        <p> Genre: String,</p>
-                        <p> Description: String</p>
-                        <p> Actors: String Array </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Return data about a director (bio, birth year, death year) BY DIRECTOR NAME</td>
-                <td>GET</td>
-                <td>Director</td>
-                <td>'/movies/directors/:directorName'</td>
-                <td>Returns a JSON object containing data of the director based on the name that was passed in the url:
+                <td>'/movies/genre'</td>
+                <td>Returns a JSON array of all movies in the database based on the <b>genre</b> passed in the url.
+                    Example:
                     <div class="parameterDesc">
-                        <p> DirectorID: Integer,</p>
-                        <p> Name: String,</p>
-                        <p> DOB: String,</p>
-                        <p> DOD: String</p>
+                        <p> MovieID: "61d339a7ce15f2ca5a44c03b",</p>
+                        <p> Title: "The Shawshank Redemption",</p>
+
+                        <p> Description: "The film portrays..."</p>
+
+
+                        <p> "Genre": {</p>
+                        <p> <b>" - Name": "Drama",</b></p>
+                        <p> " - Description": "Drama is a category of film..." },</p>
+
+                        <p>"Director": {</p>
+                        <p>" - Name": "Frank Darabont",</p>
+                        <p>" - Bio": "Frank Árpád Darabont is ...",</p>
+                        <p>" - Birth": "1959-01-28" },</p>
+                        <p> Actors: ["61d32db13beaf479d1a06aa2","61d3320b3beaf479d1a06aa3"], </p>
+                        <p>"Featured": true</p>
                     </div>
                 </td>
             </tr>
+
             <tr>
-                <td>Return a list of movies BY DIRECTOR NAME</td>
+                <td>Return a list of movies <b>BY DIRECTOR NAME</b></td>
                 <td>GET</td>
                 <td>Director</td>
-                <td>'/movies/:directorName'</td>
-                <td>Returns a JSON object containing all movies in the database by the name of the director that was
+                <td>'/movies/directorName'</td>
+                <td>Returns a JSON object containing all movies in the database by the name of the<b> director name
+                    </b>that was
                     passed in the url:
                     <div class="parameterDesc">
                         <p> MovieID: Integer,</p>
@@ -101,46 +112,46 @@
                     </div>
                 </td>
             </tr>
+
             <tr>
-                <td>Return data about a actor (bio, birth year, death year) BY ACTOR NAME</td>
+                <td>Return a list of all users</td>
                 <td>GET</td>
-                <td>Actor</td>
-                <td>'/movies/actors/:actorName'</td>
-                <td>Returns a JSON object containing data of the actor based on the name that was passed in the url:
-                    <div class="parameterDesc">
-                        <p> ActorID: Integer,</p>
-                        <p> Name: String,</p>
-                        <p> DOB: String,</p>
-                        <p> DOD: String</p>
+                <td>None passed (retrieve all)</td>
+                <td>'/users'</td>
+                <td>Returns a JSON object containing the list of all users in the database. Example:<div
+                        class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": [] </p>
+                        <p>DOB: "2001-01-01" </p>
                     </div>
                 </td>
             </tr>
             <tr>
-                <td>Return a list of movies BY ACTOR NAME</td>
-                <td>GET</td>
-                <td>Actor</td>
-                <td>'/movies/:ActorName'</td>
-                <td>Returns a JSON object containing all movies in the database by the name of the actor that was passed
-                    in the
-                    url:
-                    <div class="parameterDesc">
-                        <p> MovieID: Integer,</p>
-                        <p> Title: String,</p>
-                        <p> Genre: String,</p>
-                        <p> Description: String</p>
-                        <p> Actors: String Array </p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Retrun a list of favorite movies by USER NAME</td>
+                <td>Return a data about a user by <b> USER NAME</b></td>
                 <td>GET</td>
                 <td>Username</td>
-                <p>Username: String,</p>
-                <p>Movies: String Array</p>
-                <td>'/users'</td>
-                <td>Returns a JSON object containing the list of favorite movies by the username passed in the URL
-                    in the url:
+                <td>'/users/username'</td>
+                <td>Returns a JSON object containing the user based on the <b>username</b> passed in the URL. Example:
+                    <div class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": [] </p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Return a list of favorite movies by <b> USER NAME</b></td>
+                <td>GET</td>
+                <td>Username</td>
+                <td>'/users/movies'</td>
+                <td>Returns a JSON object containing the list of favorite movies based on the <b>username</b> passed in
+                    the URL:
                     <div class="parameterDesc">
                         <p> MovieID: Integer,</p>
                         <p> Title: String,</p>
@@ -154,51 +165,107 @@
                 <td>Allow new users to register</td>
                 <td>POST</td>
                 <td>JSON object with user data:<div class="parameterDesc">
-                        <p> UserID: Integer,</p>
-                        <p>Username: String,</p>
-                        <p>Password: String,</p>
-                        <p>Email: String</p>
-                        <p>DOB: String </p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>DOB: "2001-01-01" </p>
                     </div>
                 </td>
                 <td>'/users'</td>
-                <td>Returns success message with username added.</td>
+                <td>Returns a JSON object containing data about the username added. Example:<div class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": [] </p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td>Allow users to update their user info (username)</td>
+                <td>Allow users to update their user info <b>BY USERNAME</b></td>
                 <td>PUT</td>
                 <td>Username</td>
-                <td>'/users/:username'</td>
-                <td>Returns success message with the username that was updated by the user.</td>
+                <td>'/users/username'</td>
+                <td>JSON object with updated user data. Example:<div class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "UpdatedPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": [] </p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>Allow users to add a movie to their list of favorite movies</td>
                 <td>POST</td>
-                <td>JSON object with movie data:<div class="parameterDesc">
-                        <p> MovieID: Integer,</p>
-                        <p> Title: String,</p>
-                        <p> Genre: String,</p>
-                        <p> Director: String</p>
-                        <p> Actors: String Array </p>
+                <td>Username, MovieID
+                </td>
+                <td>'/users/userid/movies/movieName'</td>
+                <td>Returns a JSON object with updated user data. Example:<div class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "UpdatedPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": ["61d33b12ce15f2ca5a44c03c"]</p>
+                        <p>DOB: "2001-01-01" </p>
                     </div>
                 </td>
-                <td>'/users/add/:movieName'</td>
-                <td>Returns a text confirming which movie was added successfully.</td>
             </tr>
             <tr>
-                <td>Allow users to remove a movie to their list of favorite movies</td>
+                <td>Allow users to remove a movie from their list of favorite movies</td>
                 <td>DELETE</td>
-                <td>Title</td>
-                <td>'/users/remove/:movieName'</td>
-                <td>Returns a text confirming which movie was removed successfully.</td>
+                <td>Username, MovieID</td>
+                <td>'/users/:userid/movies/:movieid'</td>
+                <td>Returns a JSON object with updated user data. Example:<div class="parameterDesc">
+                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "UpdatedPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": ["61d33b12ce15f2ca5a44c03c"]</p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>Allow existing users to deregister</td>
                 <td>DELETE</td>
                 <td>Username</td>
-                <td>'/users/deleteAccount'</td>
+                <td>'/users/:username'</td>
                 <td>Returns a text confirming that the user's email was deleted successfully.</td>
             </tr>
+            <tr>
+                <td>Return a list of all actors in the database</td>
+                <td>GET</td>
+                <td>None passed (retrieve all)</td>
+                <td>'/actors'</td>
+                <td>Returns a JSON objects of all actors in the database. Example:
+                    <div class="parameterDesc">
+                        <p> ActorID: "61d3324a3beaf479d1a06aa4",</p>
+                        <p> Name: "Song Kang-ho",</p>
+                        <p> Bio: ""Song Kang-ho is a South Korean actor."</p>
+                        <p> Birth: 1967-01-17</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Return data about an actor (bio, birth year, death year) by <b>ACTOR NAME</b></td>
+                <td>GET</td>
+                <td>Actor</td>
+                <td>'/movies/actors/actorName'</td>
+                <td>Returns a JSON object containing data about an actor based on the <b>actor name</b> that was passed
+                    in the url:
+                    <div class="parameterDesc">
+                        <p> ActorID: Integer,</p>
+                        <p> Name: String,</p>
+                        <p> DOB: String,</p>
+                        <p> DOD: String</p>
+                    </div>
+                </td>
+            </tr>
+
+
         </tbody>
     </table>
 </body>
