@@ -1,0 +1,18 @@
+ "Genre": {
+            "Name": "Thriller",
+            "Description": "Thriller film, also known as suspense film or suspense thriller, is a broad film genre that involves excitement and suspense in the audience."
+        },
+        "Director": {
+            "Name": "David Fincher",
+            "Bio": "David Andrew Leo Fincher is an American film director. His films, mostly psychological thrillers and biographical dramas, have received 40 nominations at the Academy Awards.",
+            "Birth": "1962-11-28T00:00:00.000Z"
+        },
+        "_id": "61d491aece15f2ca5a44c051",
+        "Title": "Fight Club",
+        "Description": "A depressed man (Edward Norton) suffering from insomnia meets a strange soap salesman named Tyler Durden (Brad Pitt) and soon finds himself living in his squalid house after his perfect apartment is destroyed.   The two bored men form an underground club with strict rules and fight other men who are fed up with their mundane lives. Their perfect partnership frays when Marla, a fellow support group crasher, attracts Tyler's attention.",
+        "ImagePath": "https://m.media-amazon.com/images/I/71YFxhhSRPL._SY445_.jpg",
+        "Actors": [
+            "61d335563beaf479d1a06aa6"
+        ],
+        "Featured": true
+    }
