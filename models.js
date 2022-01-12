@@ -14,7 +14,7 @@ let movieSchema = mongoose.Schema({
         Birth: Date
     },
     ImagePath: String,
-    Actors: [String],
+    Actors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Actor' }],
     Featured: Boolean
 });
 

@@ -75,9 +75,23 @@ app.get('/movies/:title', (req, res) => {
         });
 });
 
+//Get Genre Description
+app.get("/genres/:genre", (req, res) => {
+    Movies.findOne({
+        "Genre.Name": req.params.genre,
+    })
+        .then((movie) => {
+            res.json(movie.Genre);
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send("Error: " + err);
+        });
+});
+
 
 //Get movies by Genre
-app.get('/genres/:genre', (req, res) => {
+app.get('/genres/:genre/movies', (req, res) => {
     Movies.find({
         'Genre.Name': req.params.genre
     })
@@ -91,7 +105,7 @@ app.get('/genres/:genre', (req, res) => {
 });
 
 //Get movies by director
-app.get('/directors/:director', (req, res) => {
+app.get('/directors/:director/movies', (req, res) => {
     Movies.find({
         'Director.Name': req.params.director
     })
@@ -103,6 +117,22 @@ app.get('/directors/:director', (req, res) => {
             res.status(500).send('Error: ' + err);
         });
 });
+
+
+//Get Director Description
+app.get("/directors/:director", (req, res) => {
+    Movies.findOne({
+        "director.Name": req.params.director,
+    })
+        .then((movie) => {
+            res.json(movie.Director);
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send("Error: " + err);
+        });
+});
+
 
 //Get documentation 
 app.get('/documentation', (req, res) => {
