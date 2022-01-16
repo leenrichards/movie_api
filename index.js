@@ -160,7 +160,7 @@ app.get("/directors/:director", passport.authenticate('jwt', { session: false })
 
 
 //Get documentation 
-app.get('/documentation', passport.authenticate('jwt', { session: false }), (req, res) => {
+app.get('/documentation', (req, res) => {
     res.sendFile('public/documentation.html', { root: __dirname }); //respond through express.static
 });
 
