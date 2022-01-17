@@ -4,6 +4,8 @@ This is a web application will provide users with access to information about di
 
 ## Built With
 
+This REST API is built with: 
+
 - HTML;
 - CSS;
 - JavaScript;
@@ -13,12 +15,46 @@ This is a web application will provide users with access to information about di
 ## Link to hosted version of the app
 <a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
 
+## Essential Features/Technical Requirements
+<a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
+
+
 ## User Goals
 Users should be able to :
 - receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
 - create a profile so they can save data about their favorite movies.
 
-Essential Features
+
+## Essential Features
+
+ <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Method</th>
+                <th>Query Parameters</th>
+                <th>Endpoint URL</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Return a list of all movies in the database</td>
+                <td>GET</td>
+                <td>None passed (retrieve all)</td>
+                <td>'/movies'</td>
+                <td>Returns a JSON array of all movies in the database:<div class="parameterDesc">
+                        <p> MovieID: Integer,</p>
+                        <p> Title: String,</p>
+                        <p> Genre: String,</p>
+                        <p> Description: String</p>
+                        <p> Actors: String Array </p>
+                    </div>
+                </td>
+
+            </tr>
+   </table>       
+
 - Return a list of ALL movies to the user;
 - Return data (description, genre, director, image URL, whether it’s featured or not) about a
 single movie by title to the user;
