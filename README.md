@@ -34,7 +34,7 @@ This REST API is built with:
 |Allow users to remove a movie from their list of favorite movies | DELETE  | Username, MovieID  |	'/users/:username/movies/:movieID'|  Returns a JSON object with updated user data.
 |Allow existing users to deregister| DELETE  | Username  |	'/users/:username'| Returns a text confirming that the user's email was deleted successfully.
 |Return a list of all actors in the database| GET  | None passed (retrieve all)  |	'/actors'| Returns a JSON objects of all actors in the database
-|Return data about an actor (bio, birth year, death year) by ACTOR NAME| GET  | Actor  |	'/actors/:actorID'| Returns a JSON objects with data on a the actor passed in the url
+|Return data about an actor (bio, birth year, death year) by ACTOR NAME| GET  | Actor  |	'/actors/:actorName'| Returns a JSON objects with data on a the actor passed in the url
 
 
 ## User Goals
