@@ -41,11 +41,11 @@ Users should be able to :
           <td>None passed (retrieve all)</td>
           <td>'/movies'</td>
           <td>Returns a JSON array of all movies in the database:
-                  <p> MovieID: Integer,</p>
-                  <p> Title: String,</p>
-                  <p> Genre: String,</p>
-                  <p> Description: String</p>
-                  <p> Actors: String Array </p>
+                  - MovieID: Integer,
+                  - Title: String,
+                  - Genre: String,
+                  - Description: String
+                  - Actors: String Array 
           </td>
       </tr>
    </table>       
