@@ -58,6 +58,52 @@ Users should be able to :
                 <td>/genres/:genre/movies</td>
                 <td>Returns a JSON array of all movies in the database based on the <b>genre</b> passed in the url. </td>
             </tr>
+            
+              <tr>
+                <td>Return description of a <b>GENRE</b> (e.g., "Drama")</td>
+                <td>GET</td>
+                <td>Genre</td>
+                <td>/genres/:genre</td>
+                <td>Returns a JSON array of thte <b>genre</b> passed in the url, and its description.
+                    Example:
+                    <div class="parameterDesc">
+                        <p> MovieID: "61d339a7ce15f2ca5a44c03b",</p>
+                        <p> Title: "The Shawshank Redemption",</p>
+
+                        <p> Description: "The film portrays..."</p>
+
+
+                        <p> "Genre": {</p>
+                        <p> <b>" - Name": "Drama",</b></p>
+                        <p> " - Description": "Drama is a category of film..." },</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Return a list of movies <b>BY DIRECTOR NAME</b></td>
+                <td>GET</td>
+                <td>Director</td>
+                <td>'/directors/:director/movies'</td>
+                <td>Returns a JSON object containing all movies in the database by the name of the<b> director name </td>
+            </tr>
+
+            <tr>
+                <td>Return description of a director by <b> DIRECTOR NAME</b></td>
+                <td>GET</td>
+                <td>Director</td>
+                <td>'/directors/:director'</td>
+                <td>Returns a JSON object containing all movies in the database by the name of the<b> director name
+                    </b>that was passed in the url. </td>
+            </tr>
+
+            <tr>
+                <td>Return a list of all users</td>
+                <td>GET</td>
+                <td>None passed (retrieve all)</td>
+                <td>'/users'</td>
+                <td>Returns a JSON object containing the list of all users in the database. </td>
+            </tr>
    </table>       
 
 
