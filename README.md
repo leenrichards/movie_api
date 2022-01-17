@@ -12,6 +12,11 @@ This REST API is built with:
 - Node.js;
 - MongoDB.
 
+The database is:
+
+- Built with MongoDB and uploaded to MongoDB Atlas
+- Deployed on and connected via Heroku
+
 ## Link to hosted version of the app
 <a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
 
@@ -42,16 +47,6 @@ Users should be able to :
 - receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
 - create a profile so they can save data about their favorite movies.
 
-
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
 ## Acknowledgments
 
-- CareerFoundry tutors, mentors and fellow students.
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
+- CareerFoundry tutors and mentors.
