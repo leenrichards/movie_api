@@ -40,13 +40,8 @@ Users should be able to :
           <td>GET</td>
           <td>None passed (retrieve all)</td>
           <td>'/movies'</td>
-          <td>Returns a JSON array of all movies in the database:
-                  <p>- MovieID: Integer,
-                  <p>- Title: String,
-                  <p>- Genre: String,
-                  <p>- Description: String
-                  <p>- Actors: String Array 
-          </td>
+       <td>Returns a JSON array of all movies in the database</td>
+          
       </tr>
    </table>       
 
