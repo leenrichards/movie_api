@@ -28,7 +28,7 @@ Users should be able to :
 ## Essential Features
 
  <table>
-        <thead>
+     
             <tr>
                 <th>Action</th>
                 <th>Method</th>
@@ -36,8 +36,6 @@ Users should be able to :
                 <th>Endpoint URL</th>
                 <th>Response</th>
             </tr>
-        </thead>
-        <tbody>
             <tr>
                 <td>Return a list of all movies in the database</td>
                 <td>GET</td>
