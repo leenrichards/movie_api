@@ -64,20 +64,7 @@ Users should be able to :
                 <td>GET</td>
                 <td>Genre</td>
                 <td>/genres/:genre</td>
-                <td>Returns a JSON array of thte <b>genre</b> passed in the url, and its description.
-                    Example:
-                    <div class="parameterDesc">
-                        <p> MovieID: "61d339a7ce15f2ca5a44c03b",</p>
-                        <p> Title: "The Shawshank Redemption",</p>
-
-                        <p> Description: "The film portrays..."</p>
-
-
-                        <p> "Genre": {</p>
-                        <p> <b>" - Name": "Drama",</b></p>
-                        <p> " - Description": "Drama is a category of film..." },</p>
-                    </div>
-                </td>
+                <td>Returns a JSON array of thte <b>genre</b> passed in the url, and its description. </td>
             </tr>
 
             <tr>
