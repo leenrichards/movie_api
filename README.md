@@ -28,27 +28,26 @@ Users should be able to :
 ## Essential Features
 
  <table>
-     
-            <tr>
-                <th>Action</th>
-                <th>Method</th>
-                <th>Query Parameters</th>
-                <th>Endpoint URL</th>
-                <th>Response</th>
-            </tr>
-            <tr>
-                <td>Return a list of all movies in the database</td>
-                <td>GET</td>
-                <td>None passed (retrieve all)</td>
-                <td>'/movies'</td>
-                <td>Returns a JSON array of all movies in the database:
-                        <p> MovieID: Integer,</p>
-                        <p> Title: String,</p>
-                        <p> Genre: String,</p>
-                        <p> Description: String</p>
-                        <p> Actors: String Array </p>
-                </td>
-            </tr>
+   <tr>
+       <th>Action</th>
+       <th>Method</th>
+       <th>Query Parameters</th>
+       <th>Endpoint URL</th>
+       <th>Response</th>
+   </tr>
+      <tr>
+          <td>Return a list of all movies in the database</td>
+          <td>GET</td>
+          <td>None passed (retrieve all)</td>
+          <td>'/movies'</td>
+          <td>Returns a JSON array of all movies in the database:
+                  <p> MovieID: Integer,</p>
+                  <p> Title: String,</p>
+                  <p> Genre: String,</p>
+                  <p> Description: String</p>
+                  <p> Actors: String Array </p>
+          </td>
+      </tr>
    </table>       
 
 - Return a list of ALL movies to the user;
