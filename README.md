@@ -16,82 +16,31 @@ This REST API is built with:
 <a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
 
 ## Essential Features/Technical Requirements
-<a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
+
+<a href="https://lynnflix.herokuapp.com/documentation" target="_blank"> Read more details documentation with examples here.</a>
+
+| Action  | Method |  Query Parameters | Endpoint URL | Response
+| ------------- | ------------- |------------- |------------- |------------- |
+| Return a list of all movies in the database  | GET  | None passed (retrieve all) | '/movies'  |Returns a JSON array of all movies in the database |
+| Return data about a single movie BY TITLE  | GET  | Title  |	'/movies/:title' |  Returns a JSON object with data on a single movie based on the title passed in the url
+| Return data about a single movie BY GENRE  | GET  | Genre  |	'/movies/:genre/movies' |  Returns a JSON array of all movies in the database based on the genre passed in the url
+| Return description BY GENRE  | GET  | Genre  |	'genres/:genre' |  Returns a JSON array of the genre passed in the url, and its description
+| Return a list of movies BY DIRECTOR NAME  | GET  | Genre  |	'/directors/:director' |  Returns a JSON object containing all movies in the database by the name of the director name that was passed in the url
+|Return a list of all users  | GET  | None passed (retrieve all)  |	'/users' |  	Returns a JSON object containing the list of all users in the database
+|Return a data about a user by USER NAME  | GET  | Username  |	'/users/username' |  	Returns a JSON object containing the user based on the username passed in the URL
+|Allow new user to register | POST  | JSON object with user data  |	'/users' |  Returns a JSON object containing data about the username added
+|Allow users to update their user info BY USERNAME | PUT  | Username  |	'/users/Username' |  	JSON object with updated user data
+|Allow users to add a movie to their list of favorite movies | POST  | Username, MovieID  |	'/users/:username/movies/:movieID'|  Returns a JSON object with updated user data.
+|Allow users to remove a movie from their list of favorite movies | DELETE  | Username, MovieID  |	'/users/:username/movies/:movieID'|  Returns a JSON object with updated user data.
+|Allow existing users to deregister| DELETE  | Username  |	'/users/:username'| Returns a text confirming that the user's email was deleted successfully.
+|Return a list of all actors in the database| GET  | None passed (retrieve all)  |	'/actors'| Returns a JSON objects of all actors in the database
+|Return data about an actor (bio, birth year, death year) by ACTOR NAME| GET  | Actor  |	'/actors/:actorID'| Returns a JSON objects with data on a the actor passed in the url
 
 
 ## User Goals
 Users should be able to :
 - receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
 - create a profile so they can save data about their favorite movies.
-
-
-## Essential Features
-
- <table>
-   <tr>
-       <th>Action</th>
-       <th>Method</th>
-       <th>Query Parameters</th>
-       <th>Endpoint URL</th>
-       <th>Response</th>
-   </tr>
-      <tr>
-          <td>Return a list of all movies in the database</td>
-          <td>GET</td>
-          <td>None passed (retrieve all)</td>
-          <td>'/movies'</td>
-       <td>Returns a JSON array of all movies in the database</td>
-      </tr>
-    </tr>
-            <tr>
-                <td>Return data about a single movie <b>BY TITLE</b></td>
-                <td>GET</td>
-                <td>Title</td>
-                <td>'/movies/:title'</td>
-                <td>Returns a JSON object with data on a single movie based on the <b>title</b> passed in the url.               
-              </td>
-            </tr>
-            <tr>
-                <td>Return a list of movies <b>BY GENRE</b> (e.g., "Drama")</td>
-                <td>GET</td>
-                <td>Genre</td>
-                <td>/genres/:genre/movies</td>
-                <td>Returns a JSON array of all movies in the database based on the <b>genre</b> passed in the url. </td>
-            </tr>
-            
-              <tr>
-                <td>Return description of a <b>GENRE</b> (e.g., "Drama")</td>
-                <td>GET</td>
-                <td>Genre</td>
-                <td>/genres/:genre</td>
-                <td>Returns a JSON array of thte <b>genre</b> passed in the url, and its description. </td>
-            </tr>
-
-            <tr>
-                <td>Return a list of movies <b>BY DIRECTOR NAME</b></td>
-                <td>GET</td>
-                <td>Director</td>
-                <td>'/directors/:director/movies'</td>
-                <td>Returns a JSON object containing all movies in the database by the name of the<b> director name </td>
-            </tr>
-
-            <tr>
-                <td>Return description of a director by <b> DIRECTOR NAME</b></td>
-                <td>GET</td>
-                <td>Director</td>
-                <td>'/directors/:director'</td>
-                <td>Returns a JSON object containing all movies in the database by the name of the<b> director name
-                    </b>that was passed in the url. </td>
-            </tr>
-
-            <tr>
-                <td>Return a list of all users</td>
-                <td>GET</td>
-                <td>None passed (retrieve all)</td>
-                <td>'/users'</td>
-                <td>Returns a JSON object containing the list of all users in the database. </td>
-            </tr>
-   </table>       
 
 
 
