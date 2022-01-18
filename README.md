@@ -53,6 +53,8 @@ Below are some example screenshots made to various endpoints of the application:
 
 ![screenshot login](https://github.com/leenrichards/movie_api/blob/main/Login%20User.jpg)
 
+![screenshot validation](https://github.com/leenrichards/movie_api/commit/add90e8b590ee08ae68a9ea1e67dbb77cefde7ef)
+
 
 
 
