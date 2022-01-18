@@ -46,19 +46,18 @@ Users should be able to :
 - receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
 - create a profile so they can save data about their favorite movies.
 
-
 ## Screenshots 
 
 Below are some example screenshots made to various endpoints of the application:
 
-**User Login:**
+**User Login with return token:**
 ![screenshot login](https://github.com/leenrichards/movie_api/blob/main/Login%20User.jpg)
 
 **Email Validation:**
 ![screenshot validation](https://raw.githubusercontent.com/leenrichards/movie_api/main/Screenshots/Excercise%202.10/Invalid%20email%20validation.jpg)
 
-
-
+**Return list of movies in the database:**
+https://github.com/leenrichards/movie_api/blob/main/Get%20movies.jpg?raw=true
 
 ## Acknowledgments
 
