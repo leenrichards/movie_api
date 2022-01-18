@@ -57,7 +57,7 @@ Below are some example screenshots made to various endpoints of the application:
 ![screenshot validation](https://raw.githubusercontent.com/leenrichards/movie_api/main/Screenshots/Excercise%202.10/Invalid%20email%20validation.jpg)
 
 **Return list of movies in the database:**
-https://github.com/leenrichards/movie_api/blob/main/Get%20movies.jpg?raw=true
+![screenshot movies](https://raw.githubusercontent.com/leenrichards/movie_api/main/Get%20movies.jpg)
 
 ## Acknowledgments
 
