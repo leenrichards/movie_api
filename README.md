@@ -41,11 +41,19 @@ The database is:
 |Return a list of all actors in the database| GET  | None passed (retrieve all)  |	'/actors'| Returns a JSON objects of all actors in the database
 |Return data about an actor (bio, birth year, death year) by ACTOR NAME| GET  | Actor  |	'/actors/:actorName'| Returns a JSON objects with data on a the actor passed in the url
 
-
 ## User Goals
 Users should be able to :
 - receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
 - create a profile so they can save data about their favorite movies.
+
+
+## Screenshots 
+
+Below are some example screenshots made to various endpoints of the application:
+
+
+
+
 
 ## Acknowledgments
 
