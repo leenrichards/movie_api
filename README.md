@@ -51,6 +51,7 @@ Users should be able to :
 
 Below are some example screenshots made to various endpoints of the application:
 
+![screenshot login](https://github.com/leenrichards/movie_api/blob/main/Login%20User.jpg)
 
 
 
