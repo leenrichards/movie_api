@@ -51,9 +51,11 @@ Users should be able to :
 
 Below are some example screenshots made to various endpoints of the application:
 
+**User Login:**
 ![screenshot login](https://github.com/leenrichards/movie_api/blob/main/Login%20User.jpg)
 
-![screenshot validation](https://github.com/leenrichards/movie_api/commit/add90e8b590ee08ae68a9ea1e67dbb77cefde7ef)
+**Email Validation:**
+![screenshot validation](https://raw.githubusercontent.com/leenrichards/movie_api/main/Screenshots/Excercise%202.10/Invalid%20email%20validation.jpg)
 
 
 
