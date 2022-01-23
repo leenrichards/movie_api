@@ -1,10 +1,10 @@
 // Mongoose models
-const mongoose = require('mongoose');
-const Models = require('./models.js');
-const { check, validationResult } = require('express-validator');
-const Movies = Models.Movie;
-const Users = Models.User;
-const Actors = Models.Actor;
+const mongoose = require('mongoose'),
+    Models = require('./models.js'),
+    { check, validationResult } = require('express-validator'),
+    Movies = Models.Movie,
+    Users = Models.User,
+    Actors = Models.Actor;
 
 //mongoose.connect('mongodb://localhost:27017/myFlixDB', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });

@@ -27,6 +27,27 @@
         </thead>
         <tbody>
             <tr>
+                <td>Allow new users to register</td>
+                <td>POST</td>
+                <td>JSON object with user data:<div class="parameterDesc">
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
+                <td>'/users'</td>
+                <td>Returns a JSON object containing data about the username added. Example:<div class="parameterDesc">
+                        <p> UserID: "xxxx",</p>
+                        <p>Username: "TestUser"",</p>
+                        <p>Password: "TestPassword",</p>
+                        <p>Email: "Test@gmail.com"</p>
+                        <p>"FavoriteMovies": [] </p>
+                        <p>DOB: "2001-01-01" </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td>Return a list of all movies in the database</td>
                 <td>GET</td>
                 <td>None passed (retrieve all)</td>
@@ -157,7 +178,7 @@
                 <td>'/users'</td>
                 <td>Returns a JSON object containing the list of all users in the database. Example:<div
                         class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p> UserID: "xxxx",</p>
                         <p>Username: "TestUser"",</p>
                         <p>Password: "TestPassword",</p>
                         <p>Email: "Test@gmail.com"</p>
@@ -173,7 +194,7 @@
                 <td>'/users/:username'</td>
                 <td>Returns a JSON object containing the user based on the <b>username</b> passed in the URL. Example:
                     <div class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p> UserID: "xxxx",</p>
                         <p>Username: "TestUser"",</p>
                         <p>Password: "TestPassword",</p>
                         <p>Email: "Test@gmail.com"</p>
@@ -183,34 +204,14 @@
                 </td>
             </tr>
 
-            <tr>
-                <td>Allow new users to register</td>
-                <td>POST</td>
-                <td>JSON object with user data:<div class="parameterDesc">
-                        <p>Username: "TestUser"",</p>
-                        <p>Password: "TestPassword",</p>
-                        <p>Email: "Test@gmail.com"</p>
-                        <p>DOB: "2001-01-01" </p>
-                    </div>
-                </td>
-                <td>'/users'</td>
-                <td>Returns a JSON object containing data about the username added. Example:<div class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
-                        <p>Username: "TestUser"",</p>
-                        <p>Password: "TestPassword",</p>
-                        <p>Email: "Test@gmail.com"</p>
-                        <p>"FavoriteMovies": [] </p>
-                        <p>DOB: "2001-01-01" </p>
-                    </div>
-                </td>
-            </tr>
+
             <tr>
                 <td>Allow users to update their user info <b>BY USERNAME</b></td>
                 <td>PUT</td>
                 <td>Username</td>
                 <td>'/users/:username'</td>
                 <td>JSON object with updated user data. Example:<div class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p> UserID: "xxxx",</p>
                         <p>Username: "TestUser"",</p>
                         <p>Password: "UpdatedPassword",</p>
                         <p>Email: "Test@gmail.com"</p>
@@ -224,9 +225,9 @@
                 <td>POST</td>
                 <td>Username, MovieID
                 </td>
-                <td>'/users/:userid/movies/:movieID'</td>
+                <td>'/users/:username/movies/:movieID'</td>
                 <td>Returns a JSON object with updated user data. Example:<div class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p> UserID: "xxxx",</p>
                         <p>Username: "TestUser"",</p>
                         <p>Password: "UpdatedPassword",</p>
                         <p>Email: "Test@gmail.com"</p>
@@ -239,9 +240,9 @@
                 <td>Allow users to remove a movie from their list of favorite movies</td>
                 <td>DELETE</td>
                 <td>Username, MovieID</td>
-                <td>'/users/:userid/movies/:movieid'</td>
+                <td>'/users/:username/movies/:movieid'</td>
                 <td>Returns a JSON object with updated user data. Example:<div class="parameterDesc">
-                        <p> UserID: "61d9a2e11c84781ef1fa23d8",</p>
+                        <p> UserID: "xxxx",</p>
                         <p>Username: "TestUser"",</p>
                         <p>Password: "UpdatedPassword",</p>
                         <p>Email: "Test@gmail.com"</p>
@@ -275,7 +276,7 @@
                 <td>Return data about an actor (bio, birth year, death year) by <b>ACTOR NAME</b></td>
                 <td>GET</td>
                 <td>Actor</td>
-                <td>'/movies/actors/:actorID'</td>
+                <td>'actors/:actorName'</td>
                 <td>Returns a JSON object containing data about an actor based on the <b>actor name</b> that was passed
                     in the url:
                     <div class="parameterDesc">
