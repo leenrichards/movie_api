@@ -1,32 +1,64 @@
-# MyFlix - movie_api
+# movie_api
+
 This is a web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.
 
-# Essential Features
+## Built With
 
-● Return a list of ALL movies to the user
+This REST API is built with: 
 
-● Return data (description, genre, director, image URL, whether it’s featured or not) about a
-single movie by title to the user
+- HTML;
+- CSS;
+- JavaScript;
+- Node.js;
+- MongoDB.
 
-● Return data about a genre (description) by name/title (e.g., “Thriller”)
+The database is:
 
-● Return data about a director (bio, birth year, death year) by name
+- Built with MongoDB and uploaded to MongoDB Atlas
+- Deployed on and connected via Heroku
 
-● Allow new users to register
+## Link to hosted version of the app
+<a href="https://lynnflix.herokuapp.com/" target="_blank"> Check it out!</a>
 
-● Allow users to update their user info (username, password, email, date of birth)
+## Essential Features/Technical Requirements
 
-● Allow users to add a movie to their list of favorites
+<a href="https://lynnflix.herokuapp.com/documentation" target="_blank"> Read more details documentation with examples here.</a>
 
-● Allow users to remove a movie from their list of favorites
+| Action  | Method |  Query Parameters | Endpoint URL | Response
+| ------------- | ------------- |------------- |------------- |------------- |
+| Return a list of all movies in the database  | GET  | None passed (retrieve all) | '/movies'  |Returns a JSON array of all movies in the database |
+| Return data about a single movie BY TITLE  | GET  | Title  |	'/movies/:title' |  Returns a JSON object with data on a single movie based on the title passed in the url
+| Return data about a single movie BY GENRE  | GET  | Genre  |	'/movies/:genre/movies' |  Returns a JSON array of all movies in the database based on the genre passed in the url
+| Return description BY GENRE  | GET  | Genre  |	'genres/:genre' |  Returns a JSON array of the genre passed in the url, and its description
+| Return a list of movies BY DIRECTOR NAME  | GET  | Genre  |	'/directors/:director' |  Returns a JSON object containing all movies in the database by the name of the director name that was passed in the url
+|Return a list of all users  | GET  | None passed (retrieve all)  |	'/users' |  	Returns a JSON object containing the list of all users in the database
+|Return a data about a user by USER NAME  | GET  | Username  |	'/users/username' |  	Returns a JSON object containing the user based on the username passed in the URL
+|Allow new user to register | POST  | JSON object with user data  |	'/users' |  Returns a JSON object containing data about the username added
+|Allow users to update their user info BY USERNAME | PUT  | Username  |	'/users/Username' |  	JSON object with updated user data
+|Allow users to add a movie to their list of favorite movies | POST  | Username, MovieID  |	'/users/:username/movies/:movieID'|  Returns a JSON object with updated user data.
+|Allow users to remove a movie from their list of favorite movies | DELETE  | Username, MovieID  |	'/users/:username/movies/:movieID'|  Returns a JSON object with updated user data.
+|Allow existing users to deregister| DELETE  | Username  |	'/users/:username'| Returns a text confirming that the user's email was deleted successfully.
+|Return a list of all actors in the database| GET  | None passed (retrieve all)  |	'/actors'| Returns a JSON objects of all actors in the database
+|Return data about an actor (bio, birth year, death year) by ACTOR NAME| GET  | Actor  |	'/actors/:actorName'| Returns a JSON objects with data on a the actor passed in the url
 
-● Allow existing users to deregister
+## User Goals
+Users should be able to :
+- receive information on movies, directors, actors and genres so they can learn more about movies they’ve watched or are interested in,
+- create a profile so they can save data about their favorite movies.
 
- # Built With
- 
-● HTML;
-● CSS;
-● JavaScript;
-● Node.js;
-● MongoDB.
- 
+## Screenshots 
+
+Below are some example screenshots made to various endpoints of the application:
+
+**User Login with return token:**
+![screenshot login](https://github.com/leenrichards/movie_api/blob/main/Login%20User.jpg)
+
+**Email Validation:**
+![screenshot validation](https://raw.githubusercontent.com/leenrichards/movie_api/main/Screenshots/Excercise%202.10/Invalid%20email%20validation.jpg)
+
+**Return list of movies in the database:**
+![screenshot movies](https://raw.githubusercontent.com/leenrichards/movie_api/main/Get%20movies.jpg)
+
+## Acknowledgments
+
+- CareerFoundry tutors and mentors.
