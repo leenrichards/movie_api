@@ -7,6 +7,8 @@ let Users = Models.User,
     JWTStrategy = passportJWT.Strategy,
     ExtractJWT = passportJWT.ExtractJwt;
 
+
+/* HTTP Authemtication for login requests */
 passport.use(new LocalStrategy({
     usernameField: 'Username',
     passwordField: 'Password'
@@ -32,6 +34,7 @@ passport.use(new LocalStrategy({
     });
 }));
 
+/* Authenticate users based on JWT*/
 passport.use(new JWTStrategy({
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: 'your_jwt_secret'
